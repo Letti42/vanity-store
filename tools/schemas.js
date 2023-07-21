@@ -10,7 +10,8 @@ export function _dotheschemathing() {
             key: { type: String, default: false }
         },
         dateCreated: { type: Number, default: false },
-        lastLogin: { type: Number, default: 0 }
+        lastLogin: { type: Number, default: 0 },
+        email:{type:String, default:false}
     }
 
     return { accountSchema: accountSchema };

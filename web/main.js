@@ -2,8 +2,10 @@
 let btn = document.querySelector("#signup");
 let user = document.querySelector("#user");
 let pass = document.querySelector("#pass");
+let email = document.querySelector("#email");
+
 btn.onclick = async()=>{
-    let userData = {user:user.value, pass:pass.value};
+    let userData = {user:user.value, pass:pass.value, email:email.value};
 
     let response = await fetch("/signup", {
         headers:{
@@ -15,6 +17,7 @@ btn.onclick = async()=>{
     });
 
     let json = await response.json();
-    console.log(json);
+
+    document.querySelector("#message").innerText = json.W;
 }
 
